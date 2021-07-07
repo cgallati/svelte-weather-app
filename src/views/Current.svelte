@@ -1,4 +1,5 @@
 <script>
+  import Weather from '../componenets/Weather.svelte'
   const weather = {
     city: 'Charleston, SC',
     temp: '80 &deg; F',
@@ -16,12 +17,7 @@
   <a href="">Favorites</a>
 </nav>
 <main>
-  <figure>
-    <img alt="{weather.description}" src="/icons/{weather.icon}.png" />
-  </figure>
-  <h3>{weather.city}</h3>
-  <h1>{@html weather.temp}</h1>
-  <p>{weather.description}</p>
+  <Weather {...weather}/>
 </main>
 <style>
   nav {
